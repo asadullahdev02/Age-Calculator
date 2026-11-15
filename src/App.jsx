@@ -241,6 +241,7 @@ export default function App() {
                 setDob(e.target.value);
                 if (error) setError('');
               }}
+              onKeyDown={(e) => { if (e.key === 'Enter') calculateAge(); }}
               className={`w-full p-2.5 sm:p-3 border-2 ${error ? 'border-red-400' : 'border-emerald-200'} rounded-xl focus:border-emerald-500 outline-none text-xs sm:text-sm text-gray-700 bg-gray-50`}
             />
             {error && <p className="text-xs text-red-500 mt-1">{error}</p>}
